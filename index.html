@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="savage.js"></script>
+  </head>
+  <body>
+    <div id="svg_div">
+    </div>
+    <div id="svg_form">
+      Text: <input type="text" name="text" id="text">
+      Background: <input type="text" name="bg_color" id="bg_color">
+      <button onclick="updateSVG()">Update SVG</button>
+    </div>
+    <script type='text/javascript'>
+      tmp= '<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg"><g><title>background</title><rect fill="{{ color bg_color }}" height="400" width="400" /><text y="200" x="200">{{ string text }}</text></g></svg>'
+      svg = Savage(tmp)
+      updateSVG = function() {
+        svg.setFields(fields)
+        svg.setFields({bg_color: document.getElementById("bg_color").value,
+                       text: document.getElementById("text").value})
+	div = document.getElementById('svg_div')
+	div.innerHTML = svg.render()
+      }
+    </script>
+  </body>
+</html>
