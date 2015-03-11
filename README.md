@@ -1,5 +1,5 @@
 # Savage
-SVG templating engine written in Javascript.
+SVG templating engine written in Javascript.  See index.html for an example.
 
 Usage:
 ```
