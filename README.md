@@ -1,5 +1,5 @@
 # Savage
-SVG templating engine written in Javascript.  See index.html for an example.
+SVG templating engine written in Javascript. It's written as a CommonJS module for your convenience. You can also simply include it as usual and access the `Savage` object without worrying about a `require` statement. See index.html for an example.
 
 Usage:
 ```
