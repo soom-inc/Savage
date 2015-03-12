@@ -1,4 +1,4 @@
-function Savage(SVGTemplate) {
+var Savage = function (SVGTemplate) {
     this.template = SVGTemplate
     this.fields = null
     this.types = null
@@ -49,3 +49,5 @@ function Savage(SVGTemplate) {
     construct()
     return this
 }
+
+module.exports = Savage;
