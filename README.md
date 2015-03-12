@@ -4,8 +4,9 @@ SVG templating engine written in Javascript.  See index.html for an example.
 Usage:
 ```
 s = Savage(SVGTemplatingString)  // returns SVG template object
-s.getFields()                    // returns a dictionary of field names and values
-s.setFields(dictionary)          // can update any number of fields
+d = s.getFields()                // returns a dictionary of field names and values
+d[field] = value                 // set SVG template field
+s.setFields(d)                   // can update any number of fields
 s.getTypes()                     // returns types of each field
 s.render()                       // returns compiled SVG string
 ```
